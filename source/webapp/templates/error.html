@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% block menu %}
+    <li><a href="{% url 'status_view' %}">Status</a></li>
+{% endblock %}
+{% block title %}Delete Status{% endblock %}
+{% block content %}
+    <h1>you cannot delete </h1>
+{% endblock %}
