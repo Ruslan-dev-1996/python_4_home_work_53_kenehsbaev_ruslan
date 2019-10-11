@@ -6,5 +6,5 @@ from .status_view import StatusView, StatusCreateView, StatusUpdateView,\
 
 from .type_view import TypeView, TypeCreateView, TypeUpdateView, TypeDeleteView
 
-from  .projects_view import ProjectView, ProjectCreateView,  ProjectUpdateView, \
+from  .projects_view import ProjectView, ProjectDetailView, ProjectCreateView,  ProjectUpdateView, \
     ProjectDeleteView

@@ -1,14 +1,20 @@
 from django.urls import reverse
 from webapp.forms import ProjectForm
 from webapp.models import Project
-from django.views.generic import CreateView, ListView, UpdateView, DeleteView
-
+from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
 
 
 class ProjectView(ListView):
     template_name = 'project/project_view.html'
     model = Project
     context_object_name = 'projects'
+    ordering = ['created_ad']
+
+
+class ProjectDetailView(DetailView):
+    template_name = 'tracker/detailed.html'
+    model = Project
+    context_object_name = 'project'
 
 
 class ProjectCreateView(CreateView):
