@@ -12,7 +12,7 @@ class ProjectView(ListView):
 
 
 class ProjectDetailView(DetailView):
-    template_name = 'tracker/detailed.html'
+    template_name = 'project/detail_project.html'
     model = Project
     context_object_name = 'project'
 

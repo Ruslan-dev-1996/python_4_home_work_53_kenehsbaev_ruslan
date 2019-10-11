@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ tracker.summary }}{% endblock %}
+
+{% block menu %}
+    <li><a href="{% url 'project_update' project.pk %}">Refresh</a></li>
+    <li><a href="{% url 'project_delete' project.pk %}">Delete</a></li>
+{% endblock %}
+
+{% block content %}
+    <h1>{{ project.projects }}</h1>
+    <p>{{ tracker.summary }} {{ tracker.type }} ({{ tracker.status|default_if_none:'Без категории' }})
+            at {{ tracker.created_at|date:'d.m.Y H:i:s' }}</p>
+    <div class="pre">{{ tracker.description }}</div>
+{% endblock %}
