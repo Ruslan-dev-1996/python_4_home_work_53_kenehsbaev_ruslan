@@ -15,12 +15,12 @@ class Tracker(models.Model):
         return self.summary
 
 class Project(models.Model):
-    project = models.CharField(max_length=200, null=False, blank=False, verbose_name='comments')
-    depiction = models.TextField(max_length=400, null=False, blank=False, verbose_name='Комментарий')
+    name = models.CharField(max_length=200, null=False, blank=False, verbose_name='comments')
+    description = models.TextField(max_length=400, null=False, blank=False, verbose_name='Комментарий')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Время изменения')
     def __str__(self):
-        return self.project
+        return self.name
 
 
 class Status(models.Model):

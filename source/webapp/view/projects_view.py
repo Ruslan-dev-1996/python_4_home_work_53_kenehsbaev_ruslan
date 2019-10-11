@@ -8,7 +8,7 @@ class ProjectView(ListView):
     template_name = 'project/project_view.html'
     model = Project
     context_object_name = 'projects'
-    ordering = ['created_ad']
+    ordering = ['created_at']
 
 
 class ProjectDetailView(DetailView):
